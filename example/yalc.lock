@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "@rnhooks/template": {
+      "signature": "6e1edee38025a6e62bba29e139aa7251",
+      "file": true
+    }
+  }
+}

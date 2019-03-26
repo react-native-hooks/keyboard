@@ -1,0 +1,9 @@
+.idea
+node_modules
+_tests_
+.DS_Store
+.vscode
+*.log
+coverage
+example
+yalc.lock
