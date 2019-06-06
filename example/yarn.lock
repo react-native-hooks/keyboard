@@ -832,10 +832,10 @@
     xcode "^2.0.0"
     xmldoc "^0.4.0"
 
-"@rnhooks/template@*":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@rnhooks/template/-/template-0.0.2.tgz#ac454f308cfa7fc454b2335e59c44aac65cbaf57"
-  integrity sha512-xYza+2G2T3FSLW3HhDN4VnQHyMC4sS0Y+p+4qNVnvZCaq0y9dc0koScP8x5hgThCwNwxnY+v1xwdYksLM/salA==
+"@rnhooks/keyboard@*":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@rnhooks/keyboard/-/keyboard-0.0.1.tgz#107f67cf9840375b44525e77e1c90cd20f6ef774"
+  integrity sha512-gQuKhlN2PvBLxyEyxQa8BWIGxhBonu4osP1L5sMgLzFYyHQu9J4oR/eQDkVrg8tYTZBhKAiLIDEStS41kKBFTA==
 
 "@types/babel__core@^7.1.0":
   version "7.1.0"
@@ -3394,9 +3394,9 @@ jest@^24.5.0:
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
 
 js-yaml@^3.12.0, js-yaml@^3.9.0:
-  version "3.12.2"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.12.2.tgz#ef1d067c5a9d9cb65bd72f285b5d8105c77f14fc"
-  integrity sha512-QHn/Lh/7HhZ/Twc7vJYQTkjuCa0kaCcDcjK5Zlk2rvnUpy7DxMJ23+Jc2dcyvltwQVg1nygAVlB2oRDFHoRS5Q==
+  version "3.13.1"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.13.1.tgz#aff151b30bfdfa8e49e05da22e7415e9dfa37847"
+  integrity sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
