@@ -23,8 +23,8 @@ export default () => {
     Keyboard.addListener('keyboardDidHide', onKeyboardDidHide);
 
     return () => {
-      Keyboard.removeListener('keyboardDidShow');
-      Keyboard.removeListener('keyboardDidHide');
+      Keyboard.removeListener('keyboardDidShow', onKeyboardDidShow);
+      Keyboard.removeListener('keyboardDidHide', onKeyboardDidHide);
     };
   }, []);
 
