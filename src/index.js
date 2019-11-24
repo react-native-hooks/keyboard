@@ -19,12 +19,12 @@ export default () => {
       setVisible(false);
     }
 
-    Keyboard.addEventListener('keyboardDidShow', onKeyboardDidShow);
-    Keyboard.addEventListener('keyboardDidHide', onKeyboardDidHide);
+    Keyboard.addListener('keyboardDidShow', onKeyboardDidShow);
+    Keyboard.addListener('keyboardDidHide', onKeyboardDidHide);
 
     return () => {
-      Keyboard.removeEventListener('keyboardDidShow', onKeyboardDidShow);
-      Keyboard.removeEventListener('keyboardDidHide', onKeyboardDidHide);
+      Keyboard.removeListener('keyboardDidShow');
+      Keyboard.removeListener('keyboardDidHide');
     };
   }, []);
 
