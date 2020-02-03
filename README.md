@@ -27,10 +27,27 @@ function App() {
 
 ```
 
+### Configuration
+
+If you like, you can configure the hook to use the `will` events instead of the
+`did` events (by default, it uses the `did` events). This is useful in cases
+where you want to trigger an animation before the keyboard begins dismissing:
+
+```js
+useKeyboard({
+  useWillShow: true,
+  useWillHide: true,
+})
+```
+
+| Name        | Default | Type    | Description                               |
+| ----------- | ------- | -------:| ----------------------------------------- |
+| useWillShow | `false` | boolean | Use the `keyboardWillShow` event instead. |
+| useWillHide | `false` | boolean | Use the `keyboardWillHide` event instead. |
+
 ### Output
 
 | Name    | Default             | Type     | Description         |
 | ------- | ------------------- | --------:| ------------------- |
 | visible | `false`             | boolean  | Keyboard Visibility |
 | dismiss | `Keyboard.dismiss`  | function | Dismiss Keyboard    |
-
