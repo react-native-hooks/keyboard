@@ -1,6 +1,6 @@
 {
   "name": "@rnhooks/keyboard",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React Native Hook for Keyboard",
   "main": "dist/react-native-hooks-keyboard.cjs.js",
   "jsnext:main": "dist/react-native-hooks-keyboard.esm.js",
