@@ -6,12 +6,16 @@
 
 ```bash
 yarn add @rnhooks/keyboard
+
+or
+
+npm i @rnhooks/keyboard
 ```
 
 ### Usage
 
-```js
-import useKeyboard from '@rnhooks/keyboard';
+```tsx
+import { useKeyboard } from '@rnhooks/keyboard';
 
 function App() {
   const [visible, dismiss] = useKeyboard();
