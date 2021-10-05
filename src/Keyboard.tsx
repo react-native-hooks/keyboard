@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Keyboard } from 'react-native';
 import { UseKeyboardProps } from './types';
-const ReactNativeVersion = require('react-native/Libraries/Core/ReactNativeVersion');
 
 const useKeyboard = (config: UseKeyboardProps = {}) => {
   const { useWillShow = false, useWillHide = false } = config;
@@ -15,11 +14,6 @@ const useKeyboard = (config: UseKeyboardProps = {}) => {
   }
 
   useEffect(() => {
-    const v = parseInt(
-      ReactNativeVersion.version.major + ReactNativeVersion.version.minor,
-      10
-    );
-
     function onKeyboardShow() {
       setVisible(true);
     }
@@ -28,25 +22,21 @@ const useKeyboard = (config: UseKeyboardProps = {}) => {
       setVisible(false);
     }
 
-    if (v >= 65) {
-      const showSubscription = Keyboard.addListener(showEvent, () =>
-        onKeyboardShow()
-      );
-      const hideSubscription = Keyboard.addListener(hideEvent, () =>
-        onKeyboardHide()
-      );
-
-      return () => {
-        showSubscription.remove();
-        hideSubscription.remove();
-      };
-    } else {
+    if (Keyboard.removeListener) {
       Keyboard.addListener(showEvent, onKeyboardShow);
       Keyboard.addListener(hideEvent, onKeyboardHide);
 
       return () => {
         Keyboard.removeListener(showEvent, onKeyboardShow);
         Keyboard.removeListener(hideEvent, onKeyboardHide);
+      };
+    } else {
+      const showSubscription = Keyboard.addListener(showEvent, onKeyboardShow);
+      const hideSubscription = Keyboard.addListener(hideEvent, onKeyboardHide);
+
+      return () => {
+        showSubscription?.remove();
+        hideSubscription?.remove();
       };
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
