@@ -1,4 +1,5 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable no-unused-vars  */
+/* eslint-disable no-unused-expressions  */
 import React, { useEffect, useState } from 'react';
 import { Keyboard } from 'react-native';
 
@@ -22,12 +23,22 @@ export default (config = {}) => {
       setVisible(false);
     }
 
-    Keyboard.addListener(showEvent, onKeyboardShow);
-    Keyboard.addListener(hideEvent, onKeyboardHide);
+    if (Keyboard.removeListener) {
+      Keyboard.addListener(showEvent, onKeyboardShow);
+      Keyboard.addListener(hideEvent, onKeyboardHide);
+
+      return () => {
+        Keyboard.removeListener(showEvent, onKeyboardShow);
+        Keyboard.removeListener(hideEvent, onKeyboardHide);
+      };
+    }
+
+    const showSubscription = Keyboard.addListener(showEvent, onKeyboardShow);
+    const hideSubscription = Keyboard.addListener(hideEvent, onKeyboardHide);
 
     return () => {
-      Keyboard.removeListener(showEvent, onKeyboardShow);
-      Keyboard.removeListener(hideEvent, onKeyboardHide);
+      showSubscription?.remove();
+      hideSubscription?.remove();
     };
   }, [useWillShow, useWillHide]);
 
