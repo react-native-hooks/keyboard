@@ -1,5 +1,5 @@
-/* eslint-disable no-unused-vars  */
-/* eslint-disable no-unused-expressions  */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-unused-expressions */
 import React, { useEffect, useState } from 'react';
 import { Keyboard } from 'react-native';
 
