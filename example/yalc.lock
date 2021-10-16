@@ -1,9 +1,10 @@
 {
   "version": "v1",
   "packages": {
-    "@rnhooks/template": {
-      "signature": "6e1edee38025a6e62bba29e139aa7251",
-      "file": true
+    "@rnhooks/keyboard": {
+      "signature": "71eddb8d710cd84a80a166ab1ffe6981",
+      "file": true,
+      "replaced": "*"
     }
   }
 }
