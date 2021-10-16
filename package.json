@@ -1,6 +1,6 @@
 {
   "name": "@rnhooks/keyboard",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "React Native Hook for Keyboard",
   "main": "dist/react-native-hooks-keyboard.cjs.js",
   "jsnext:main": "dist/react-native-hooks-keyboard.esm.js",
@@ -30,7 +30,7 @@
   "author": {
     "name": "Pritish Vaidya",
     "email": "pritishvaidya94@gmail.com",
-    "url": "pritishvaidya.com"
+    "url": "https://pritishvaidya.dev"
   },
   "license": "MIT",
   "repository": {
@@ -81,7 +81,7 @@
   },
   "peerDependencies": {
     "react": ">16.8.0",
-    "react-native": ">0.59.0"
+    "react-native": ">=0.65.0"
   },
   "jest": {
     "preset": "react-native",
