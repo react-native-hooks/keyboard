@@ -8,6 +8,10 @@
 yarn add @rnhooks/keyboard
 ```
 
+> **Note**
+>
+> `v1.0.0` and above is only supported on `react-native >= 0.65`, for older `react-native` use the older release.
+
 ### Usage
 
 ```js
