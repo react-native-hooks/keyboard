@@ -23,22 +23,12 @@ export default (config = {}) => {
       setVisible(false);
     }
 
-    if (Keyboard.removeListener) {
-      Keyboard.addListener(showEvent, onKeyboardShow);
-      Keyboard.addListener(hideEvent, onKeyboardHide);
-
-      return () => {
-        Keyboard.removeListener(showEvent, onKeyboardShow);
-        Keyboard.removeListener(hideEvent, onKeyboardHide);
-      };
-    }
-
     const showSubscription = Keyboard.addListener(showEvent, onKeyboardShow);
     const hideSubscription = Keyboard.addListener(hideEvent, onKeyboardHide);
 
     return () => {
-      showSubscription?.remove();
-      hideSubscription?.remove();
+      showSubscription.remove();
+      hideSubscription.remove();
     };
   }, [useWillShow, useWillHide]);
 

@@ -2,7 +2,7 @@
   "version": "v1",
   "packages": {
     "@rnhooks/keyboard": {
-      "signature": "71eddb8d710cd84a80a166ab1ffe6981",
+      "signature": "e84a2315d347d2d2ceba821854c718a8",
       "file": true,
       "replaced": "*"
     }
