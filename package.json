@@ -20,7 +20,8 @@
     "yalc": "npm run build && yalc push"
   },
   "files": [
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
   "keywords": [
     "react-native",
