@@ -5,6 +5,7 @@
   "main": "dist/react-native-hooks-keyboard.cjs.js",
   "jsnext:main": "dist/react-native-hooks-keyboard.esm.js",
   "module": "dist/react-native-hooks-keyboard.esm.js",
+  "types": "index.d.ts",
   "scripts": {
     "prebuild": "rimraf dist",
     "prepublishOnly": "run-s build",
@@ -19,7 +20,8 @@
     "yalc": "npm run build && yalc push"
   },
   "files": [
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
   "keywords": [
     "react-native",
